@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Library Registration</title>
+</head>
+<body>
+
+    <h1>Library Membership Registration</h1>
+
+    <form action="#" method="POST">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            Full Name: <input type="text" name="full_name" placeholder="Enter Full Name" required><br><br>
+            Membership ID: <input type="text" name="membership_id" placeholder="Enter membership ID" required><br><br>
+            Email: <input type="email" name="email" placeholder="Enter Email" required><br><br>
+            Phone: <input type="tel" name="phone" placeholder="Enter Phone Number" required><br><br>
+            DOB: <input type="date" name="dob" required><br><br>
+            Gender: 
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Membership Information</legend>
+            Type: 
+            <select name="membership_type" required>
+                <option value="Student" selected>Student</option>
+                <option value="Faculty">Faculty</option>
+                <option value="Researcher">Researcher</option>
+                <option value="General Member">General Member</option>
+            </select><br><br>
+            Section: 
+            <select name="library_section" required>
+                <option value="Science & Technology">Science & Technology</option>
+                <option value="Literature">Literature</option>
+                <option value="Business Studies">Business Studies</option>
+                <option value="History">History</option>
+                <option value="Arts & Culture">Arts & Culture</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Reading Preferences</legend>
+            Favorite Book Categories:<br>
+            <input type="checkbox" name="categories" value="Fiction"> Fiction<br>
+            <input type="checkbox" name="categories" value="Non-Fiction"> Non-Fiction<br>
+            <input type="checkbox" name="categories" value="Science"> Science<br>
+            <input type="checkbox" name="categories" value="Technology"> Technology<br>
+            <input type="checkbox" name="categories" value="Biography"> Biography<br>
+            <input type="checkbox" name="categories" value="History"> History
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Library Services</legend>
+            Services to Use:<br>
+            <input type="checkbox" name="services" value="Book Borrowing"> Book Borrowing<br>
+            <input type="checkbox" name="services" value="Digital Library Access"> Digital Library Access<br>
+            <input type="checkbox" name="services" value="Reading Room"> Reading Room<br>
+            <input type="checkbox" name="services" value="Research Assistance"> Research Assistance
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Additional Info</legend>
+            Current Address:<br>
+            <textarea name="address" rows="2" placeholder="Enter Your Address" required></textarea><br><br>
+            Emergency Contact: <input type="tel" name="emergency_contact" placeholder="Emergency Contact" required><br><br>
+            Reason for Joining:<br>
+            <textarea name="reason" rows="2"></textarea><br><br>
+            Suggestions:<br>
+            <textarea name="suggestions" rows="2" maxlength="250"></textarea>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+</body>
+</html>
