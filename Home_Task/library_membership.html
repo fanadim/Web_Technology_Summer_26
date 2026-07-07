@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Library Membership Registration</h1>
+        <br>
+        <form action="#" method="POST">
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="row">
+                    <div class="input">
+                        <label for="name">Full Name</label> 
+                        <input type="text" id="name" name="name" placeholder="Enter Full Name" required>
+                    </div>
+                    
+                    <div class="input">
+                        <label for="memberId">Membership ID</label> 
+                        <input type="text" id="memberId" name="memberId" placeholder="Enter Membership Id" required>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="input">
+                        <label for="email">Email Address</label> 
+                        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                    </div>
+                    
+                    <div class="input">
+                        <label for="phone">Phone Number</label> 
+                        <input type="tel" id="phone" name="phone" placeholder="Enter Contact Number" required>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="input">
+                        <label for="dob">Date of Birth</label> 
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    
+                    <div class="input">
+                        <label>Gender</label>
+                        <div class="radio">
+                            <label class="choice">
+                                <input type="radio" id="male" name="gender" value="Male" required> 
+                                <span>Male</span>
+                            </label>
+                            <label class="choice">
+                                <input type="radio" id="female" name="gender" value="Female"> 
+                                <span>Female</span>
+                            </label>
+                            <label class="choice">
+                                <input type="radio" id="other" name="gender" value="Other"> 
+                                <span>Other</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership Information</legend>
+                <div class="row">
+                    <div class="input">
+                        <label for="type">Membership Type</label> 
+                        <select id="type" name="type" required>
+                            <option  selected>Tap to select</option>
+                            <option value="Student">Student</option>
+                            <option value="Faculty">Faculty</option>
+                            <option value="Researcher">Researcher</option>
+                            <option value="General Member">General Member</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input">
+                        <label for="sec">Preferred Section</label> 
+                        <select id="sec" name="sec" required>
+                            <option selected>Tap to select</option>
+                            <option value="Science & Technology">Science & Technology</option>
+                            <option value="Literature">Literature</option>
+                            <option value="Business Studies">Business Studies</option>
+                            <option value="History">History</option>
+                            <option value="Arts & Culture">Arts & Culture</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Reading Preferences</legend>
+                <label class="heading">Favorite Book Categories</label>
+                <div class="grid">
+                    <label class="choice">
+                        <input type="checkbox" id="fiction" name="categories" value="Fiction"> 
+                        <span>Fiction</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" id="nonfiction" name="categories" value="Non-Fiction"> 
+                        <span>Non-Fiction</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" id="science" name="categories" value="Science"> 
+                        <span>Science</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" id="technology" name="categories" value="Technology"> 
+                        <span>Technology</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" id="biography" name="categories" value="Biography"> 
+                        <span>Biography</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" id="history" name="categories" value="History"> 
+                        <span>History</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Library Services</legend>
+                <label class="heading">Services to Use</label>
+                <div class="grid">
+                    <label class="choice">
+                        <input type="checkbox" id="borrowing" name="services" value="Book Borrowing"> 
+                        <span>Book Borrowing</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" id="digital" name="services" value="Digital Library Access"> 
+                        <span>Digital Library Access</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" id="reading" name="services" value="Reading Room"> 
+                        <span>Reading Room</span>
+                    </label>
+                    <label class="choice">
+                        <input type="checkbox" id="research" name="services" value="Research Assistance"> 
+                        <span>Research Assistance</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Info</legend>
+                <div class="input">
+                    <label for="address">Current Address</label>
+                    <textarea id="address" name="address" rows="2" placeholder="Enter Address" required></textarea>
+                </div>
+                
+                <div class="input">
+                    <label for="emergency_contact">Emergency Contact Phone</label> 
+                    <input type="tel" id="emergency" name="emergency" placeholder="Emergency Contact Number" required>
+                </div>
+                
+                <div class="input">
+                    <label for="reason">Reason for Joining</label>
+                    <textarea id="reason" name="reason" rows="2" placeholder="Type Here"></textarea>
+                </div>
+                
+                <div class="input">
+                    <label for="suggestions">Suggestions</label>
+                    <textarea id="suggestions" name="suggestions" rows="2" maxlength="250" placeholder="Type Here"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="buttons">
+                <button type="reset" class="btn-reset">Reset</button>
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>
