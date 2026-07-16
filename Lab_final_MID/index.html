@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Life Medical Center - Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-wrapper">
+        <header class="form-header">
+            <h2>HealthyLife Medical Center</h2>
+            <p>Patient Appointment Registration Form</p>
+        </header>
+
+        <form id="registrationForm" novalidate>
+            <fieldset class="form-sector">
+                <legend class="sector-title">Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter First Name">
+                    <span class="error-message" id="firstNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name">
+                    <span class="error-message" id="lastNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email Address">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <fieldset class="inner-fieldset">
+                        <legend class="inner-legend">Gender</legend>
+                        <div class="radio-group">
+                            <label class="clickable-label"><input type="radio" name="gender" value="Male"> Male</label>
+                            <label class="clickable-label"><input type="radio" name="gender" value="Female"> Female</label>
+                            <label class="clickable-label"><input type="radio" name="gender" value="Other"> Other</label>
+                        </div>
+                    </fieldset>
+                    <span class="error-message" id="genderError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password">
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-sector">
+                <legend class="sector-title">Appointment Details</legend>
+
+                <div class="form-group">
+                    <label for="department">Doctor's Department</label>
+                    <select id="department" name="department">
+                        <option value="">Department</option>
+                        <option value="Medicine">Medicine</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Children">children</option>
+                    </select>
+                    <span class="error-message" id="departmentError"></span>
+                </div>
+
+                <div class="form-group">
+                    <fieldset class="inner-fieldset">
+                        <legend class="inner-legend">Preferred Service</legend>
+                        <div class="checkbox-group">
+                            <label class="clickable-label"><input type="checkbox" name="services" value="Consultation"> Consultation</label>
+                            <label class="clickable-label"><input type="checkbox" name="services" value="Checkup"> Regular Checkup</label>
+                            <label class="clickable-label"><input type="checkbox" name="services" value="LabTest"> Lab Test</label>
+                        </div>
+                    </fieldset>
+                    <span class="error-message" id="servicesError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Health Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder=""></textarea>
+                    <span class="error-message" id="descriptionError"></span>
+                </div>
+            </fieldset>
+
+            <div class="btn-group">
+                <button type="submit" id="submitBtn" class="btn-submit">Confirm</button>
+                <button type="button" id="resetBtn" class="btn-reset">Reset</button>
+            </div>
+        </form>
+        
+        <div id="success-message" class="success-box hidden">
+            Appointment Registration Completed Successfully!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
